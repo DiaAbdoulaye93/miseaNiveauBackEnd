@@ -1,0 +1,69 @@
+<?php //%255BApp%255CEntity%255CProfile%255D%255B1%255D
+
+return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+    $o = [
+        clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['ApiPlatform\\Core\\Annotation\\ApiResource'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('ApiPlatform\\Core\\Annotation\\ApiResource')),
+        clone ($p['Doctrine\\ORM\\Mapping\\Entity'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\Entity')),
+        clone ($p['Symfony\\Bridge\\Doctrine\\Validator\\Constraints\\UniqueEntity'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Bridge\\Doctrine\\Validator\\Constraints\\UniqueEntity')),
+    ],
+    null,
+    [
+        'stdClass' => [
+            'collectionOperations' => [
+                [
+                    'get' => [
+                        'path' => '/admin/profils',
+                    ],
+                    'POST' => [
+                        'path' => '/admin/profils',
+                    ],
+                ],
+            ],
+            'itemOperations' => [
+                [
+                    'put' => [
+                        'path' => '/admin/profil/{id}',
+                    ],
+                    'delete' => [
+                        'path' => '/admin/profil/{id}',
+                    ],
+                    'get_profil' => [
+                        'method' => 'GET',
+                        'path' => '/admin/profil/{id}',
+                    ],
+                ],
+            ],
+            'attributes' => [
+                [
+                    'normalization_context' => [
+                        'groups' => [
+                            'profil',
+                        ],
+                    ],
+                ],
+            ],
+            'repositoryClass' => [
+                1 => 'App\\Repository\\ProfileRepository',
+            ],
+            'message' => [
+                2 => 'Le libelle doit être unique',
+            ],
+            'fields' => [
+                2 => [
+                    'libelle',
+                ],
+            ],
+            'groups' => [
+                2 => [
+                    'Default',
+                ],
+            ],
+        ],
+    ],
+    [
+        $o[0],
+        $o[1],
+        $o[2],
+    ],
+    []
+); }];

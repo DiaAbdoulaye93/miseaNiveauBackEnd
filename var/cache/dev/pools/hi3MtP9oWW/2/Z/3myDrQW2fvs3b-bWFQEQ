@@ -1,0 +1,69 @@
+<?php //%255BApp%255CEntity%255CUser%255D%255B1%255D
+
+return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+    $o = [
+        clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Doctrine\\ORM\\Mapping\\Entity'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\Entity')),
+        clone ($p['Symfony\\Bridge\\Doctrine\\Validator\\Constraints\\UniqueEntity'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Bridge\\Doctrine\\Validator\\Constraints\\UniqueEntity')),
+        clone ($p['Doctrine\\ORM\\Mapping\\InheritanceType'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\InheritanceType')),
+        clone ($p['Doctrine\\ORM\\Mapping\\DiscriminatorColumn'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\DiscriminatorColumn')),
+        clone ($p['Doctrine\\ORM\\Mapping\\DiscriminatorMap'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\DiscriminatorMap')),
+        clone ($p['ApiPlatform\\Core\\Annotation\\ApiResource'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('ApiPlatform\\Core\\Annotation\\ApiResource')),
+    ],
+    null,
+    [
+        'stdClass' => [
+            'repositoryClass' => [
+                'App\\Repository\\UserRepository',
+            ],
+            'message' => [
+                1 => 'l\'email doit être unique',
+            ],
+            'fields' => [
+                1 => [
+                    'email',
+                ],
+            ],
+            'groups' => [
+                1 => [
+                    'Default',
+                ],
+            ],
+            'value' => [
+                2 => 'JOINED',
+                4 => [
+                    'user' => 'User',
+                    'administrateur' => 'Administrateur',
+                    'cm' => 'Cm',
+                    'formateur' => 'Formateur',
+                    'apprenant' => 'Apprenant',
+                ],
+            ],
+            'name' => [
+                3 => 'type',
+            ],
+            'type' => [
+                3 => 'string',
+            ],
+            'collectionOperations' => [
+                5 => [
+                    'get' => [
+                        'path' => '/admin/users',
+                    ],
+                    'add_users' => [
+                        'method' => 'POST',
+                        'path' => '/admin/users',
+                    ],
+                ],
+            ],
+        ],
+    ],
+    [
+        $o[0],
+        $o[1],
+        $o[2],
+        $o[3],
+        $o[4],
+        $o[5],
+    ],
+    []
+); }];
