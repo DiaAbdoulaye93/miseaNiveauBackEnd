@@ -50,4 +50,9 @@ security:
         # - { path: ^/profile, roles: ROLE_USER }
         - { path: ^/api/apprenants , roles: IS_AUTHENTICATED_ANONYMOUSLY, methods:[GET]  }
         - { path: ^/api/apprenants , roles: [ROLE_Formateur] , methods:[POST]}
+        - { path: ^/api/admin/formateurs, roles: [ROLE_ADMIN,ROLE_Formateur], methods:[POST,GET,PUT,PATCH,DELETE] }
+        - { path: ^/api/admin/promo , roles: [ROLE_Formateur,ROLE_ADMIN] , methods:[POST,GET,PUT,PATCH,DELETE]}
+        - { path: ^/api/admin/tags , roles: [ROLE_Formateur,ROLE_ADMIN] , methods:[POST,GET,PUT,PATCH,DELETE]}
+        - { path: ^/api/admin/grptags , roles: [ROLE_Formateur,ROLE_ADMIN] , methods:[POST,GET,PUT,PATCH,DELETE]}
+        - { path: ^/api/admin/groupes, roles: [ROLE_Formateur,ROLE_ADMIN] , methods:[POST,GET,PUT,PATCH,DELETE]}
         - { path: ^/api/admin, roles:[ROLE_ADMIN], methods:[POST,GET,PUT,PATCH,DELETE] }

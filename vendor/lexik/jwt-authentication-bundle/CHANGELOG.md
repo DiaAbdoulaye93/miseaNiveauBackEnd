@@ -1,7 +1,26 @@
 CHANGELOG
 =========
 
-For a diff between two versions https://github.com/lexik/LexikJWTAuthenticationBundle/compare/v1.0.0...v2.9.0
+For a diff between two versions https://github.com/lexik/LexikJWTAuthenticationBundle/compare/v1.0.0...v2.10.3
+
+## [2.10.3](https://github.com/lexik/LexikJWTAuthenticationBundle/tree/v2.10.3) (2020-11-30)
+
+* bug [\#804](https://github.com/lexik/LexikJWTAuthenticationBundle/pull/804) Fix ability to set extra standard claims in the input payload (bis) ([chalasr](https://github.com/chalasr))
+* bug [\#807](https://github.com/lexik/LexikJWTAuthenticationBundle/pull/807) Fix compatibility with locbucci/jwt 3.2 ([chalasr](https://github.com/chalasr))
+
+## [2.10.2](https://github.com/lexik/LexikJWTAuthenticationBundle/tree/v2.10.2) (2020-11-30)
+
+* bug [\#801](https://github.com/lexik/LexikJWTAuthenticationBundle/pull/801) Fix ability to set extra standard claims in the input payload ([chalasr](https://github.com/chalasr))
+* bug [\#796](https://github.com/lexik/LexikJWTAuthenticationBundle/pull/796) Set Token on ExpiredTokenException ([AdrienBr](https://github.com/AdrienBr))
+
+## [2.10.1](https://github.com/lexik/LexikJWTAuthenticationBundle/tree/v2.10.1) (2020-11-28)
+
+* bug [\#797](https://github.com/lexik/LexikJWTAuthenticationBundle/pull/797) Fix support for lcobucci/jwt v3.4 and 4.0 ([chalasr](https://github.com/chalasr))
+
+## [2.10.0](https://github.com/lexik/LexikJWTAuthenticationBundle/tree/v2.10.0) (2020-11-23)
+
+* feature [\#790](https://github.com/lexik/LexikJWTAuthenticationBundle/pull/790) Fix Symfony 5.2 getProviderKey deprecation ([ogizanagi](https://github.com/ogizanagi))
+* feature [\#792](https://github.com/lexik/LexikJWTAuthenticationBundle/pull/792) PHP 8 Support ([chalasr](https://github.com/chalasr))
 
 ## [2.9.0](https://github.com/lexik/LexikJWTAuthenticationBundle/tree/v2.9.0) (2020-10-27)
 

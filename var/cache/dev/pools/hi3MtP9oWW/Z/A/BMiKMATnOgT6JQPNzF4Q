@@ -1,0 +1,31 @@
+<?php //%255BApp%255CController%255CLivrablesController%2523UpdateLivrable%255D%255B1%255D
+
+return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+    $o = [
+        clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Symfony\\Component\\Routing\\Annotation\\Route'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Routing\\Annotation\\Route')),
+    ],
+    null,
+    [
+        'Symfony\\Component\\Routing\\Annotation\\Route' => [
+            'path' => [
+                '/api/formateur/livrables/{id}',
+            ],
+            'defaults' => [
+                [
+                    '__controller' => 'App\\Controller\\ApiController::UpdateLivrable',
+                    '__api_resource_class' => 'App\\Entity\\Livrables',
+                    '__api_collection_operation_name' => 'update_livrbale',
+                ],
+            ],
+            'methods' => [
+                [
+                    'put',
+                ],
+            ],
+        ],
+    ],
+    [
+        $o[0],
+    ],
+    []
+); }];

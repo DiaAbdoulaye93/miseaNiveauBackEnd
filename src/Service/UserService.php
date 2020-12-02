@@ -4,6 +4,7 @@ namespace App\Service ;
 
 use App\Repository\UserRepository;
 use App\Repository\ProfilSortieRepository;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Serializer\SerializerInterface;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
@@ -44,5 +45,31 @@ class UserService
   
        $user->setPassword($this->encoder->encodePassword($user, "password"));
         return $user;
+    }
+ public function UpadateEntity(Request $request)
+    {
+        $data=$request->getContent(); 
+        $firstSplit=preg_split("/form-data; /",$data);
+        unset($firstSplit[0]);
+        $tabdata=[];
+        foreach($firstSplit as $oneSplit)
+        {
+        
+            $secondSplit=preg_split("/\r\n/", $oneSplit);
+            array_pop($secondSplit);
+            array_pop($secondSplit);
+            $find=explode('"', $secondSplit[0]);
+            $tabdata[$find[1]]=end($secondSplit);
+           
+        }    
+        if(isset($tabdata["photo"]))  
+        {
+            $stream=fopen('php://memory','r+');
+            fwrite($stream,$tabdata['photo']);
+            rewind($stream);
+            $tabdata['photo']=$stream;
+        } 
+        return $tabdata ;
+
     }
 }

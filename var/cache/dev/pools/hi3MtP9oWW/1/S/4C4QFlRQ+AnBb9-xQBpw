@@ -3,6 +3,7 @@
 return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
     $o = [
         clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['ApiPlatform\\Core\\Annotation\\ApiResource'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('ApiPlatform\\Core\\Annotation\\ApiResource')),
+        clone ($p['ApiPlatform\\Core\\Annotation\\ApiFilter'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('ApiPlatform\\Core\\Annotation\\ApiFilter')),
         clone ($p['Doctrine\\ORM\\Mapping\\Entity'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\Entity')),
         clone ($p['Symfony\\Bridge\\Doctrine\\Validator\\Constraints\\UniqueEntity'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Bridge\\Doctrine\\Validator\\Constraints\\UniqueEntity')),
     ],
@@ -21,15 +22,17 @@ return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\
             ],
             'itemOperations' => [
                 [
-                    'put' => [
-                        'path' => '/admin/profil/{id}',
-                    ],
-                    'delete' => [
-                        'path' => '/admin/profil/{id}',
-                    ],
                     'get_profil' => [
                         'method' => 'GET',
-                        'path' => '/admin/profil/{id}',
+                        'path' => '/admin/profils/{id}',
+                    ],
+                    'update_profile' => [
+                        'method' => 'put',
+                        'path' => '/admin/profils/{id}',
+                    ],
+                    'delete_profil' => [
+                        'method' => 'delete',
+                        'path' => '/admin/profils/{id}',
                     ],
                 ],
             ],
@@ -42,19 +45,27 @@ return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\
                     ],
                 ],
             ],
+            'filterClass' => [
+                1 => 'ApiPlatform\\Core\\Bridge\\Doctrine\\Orm\\Filter\\SearchFilter',
+            ],
+            'properties' => [
+                1 => [
+                    'isdeleted' => 'exact',
+                ],
+            ],
             'repositoryClass' => [
-                1 => 'App\\Repository\\ProfileRepository',
+                2 => 'App\\Repository\\ProfileRepository',
             ],
             'message' => [
-                2 => 'Le libelle doit être unique',
+                3 => 'Le libelle doit être unique',
             ],
             'fields' => [
-                2 => [
+                3 => [
                     'libelle',
                 ],
             ],
             'groups' => [
-                2 => [
+                3 => [
                     'Default',
                 ],
             ],
@@ -64,6 +75,7 @@ return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\
         $o[0],
         $o[1],
         $o[2],
+        $o[3],
     ],
     []
 ); }];

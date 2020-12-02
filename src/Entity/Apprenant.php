@@ -35,10 +35,7 @@ class Apprenant   extends User
     
 
    
-    /**
-     * @ORM\Column(type="string")
-     */
-    private $promo;
+   
 
     
     /**
@@ -56,6 +53,21 @@ class Apprenant   extends User
      */
     private $profil_sortie;
 
+    /**
+     * @ORM\ManyToMany(targetEntity=Groupe::class, mappedBy="apprenant")
+     */
+    private $groupes;
+
+    /**
+     * @ORM\ManyToOne(targetEntity=Promo::class, inversedBy="apprenants")
+     */
+    private $promo;
+
+    public function __construct()
+    {
+        $this->groupes = new ArrayCollection();
+    }
+
     
     public function getId(): ?int
     {
@@ -69,17 +81,7 @@ class Apprenant   extends User
 
      
 
-    public function getPromo(): ?int
-    {
-        return $this->promo;
-    }
-
-    public function setPromo(int $promo): self
-    {
-        $this->promo = $promo;
-
-        return $this;
-    }
+    
 
    
 
@@ -115,6 +117,45 @@ class Apprenant   extends User
     public function setProfilSortie(?ProfilSortie $profil_sortie): self
     {
         $this->profil_sortie = $profil_sortie;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Groupe[]
+     */
+    public function getGroupes(): Collection
+    {
+        return $this->groupes;
+    }
+
+    public function addGroupe(Groupe $groupe): self
+    {
+        if (!$this->groupes->contains($groupe)) {
+            $this->groupes[] = $groupe;
+            $groupe->addApprenant($this);
+        }
+
+        return $this;
+    }
+
+    public function removeGroupe(Groupe $groupe): self
+    {
+        if ($this->groupes->removeElement($groupe)) {
+            $groupe->removeApprenant($this);
+        }
+
+        return $this;
+    }
+
+    public function getPromo(): ?Promo
+    {
+        return $this->promo;
+    }
+
+    public function setPromo(?Promo $promo): self
+    {
+        $this->promo = $promo;
 
         return $this;
     }

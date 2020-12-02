@@ -66,10 +66,10 @@ class Profile extends \App\Entity\Profile implements \Doctrine\ORM\Proxy\Proxy
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Profile' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Profile' . "\0" . 'libelle', '' . "\0" . 'App\\Entity\\Profile' . "\0" . 'existe', '' . "\0" . 'App\\Entity\\Profile' . "\0" . 'profil'];
+            return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Profile' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Profile' . "\0" . 'libelle', '' . "\0" . 'App\\Entity\\Profile' . "\0" . 'isdeleted', '' . "\0" . 'App\\Entity\\Profile' . "\0" . 'profil'];
         }
 
-        return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Profile' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Profile' . "\0" . 'libelle', '' . "\0" . 'App\\Entity\\Profile' . "\0" . 'existe', '' . "\0" . 'App\\Entity\\Profile' . "\0" . 'profil'];
+        return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Profile' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Profile' . "\0" . 'libelle', '' . "\0" . 'App\\Entity\\Profile' . "\0" . 'isdeleted', '' . "\0" . 'App\\Entity\\Profile' . "\0" . 'profil'];
     }
 
     /**
@@ -216,23 +216,23 @@ class Profile extends \App\Entity\Profile implements \Doctrine\ORM\Proxy\Proxy
     /**
      * {@inheritDoc}
      */
-    public function getExiste(): ?bool
+    public function getIsdeleted(): ?bool
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getExiste', []);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getIsdeleted', []);
 
-        return parent::getExiste();
+        return parent::getIsdeleted();
     }
 
     /**
      * {@inheritDoc}
      */
-    public function setExiste(?bool $existe): \App\Entity\Profile
+    public function setIsdeleted(?bool $isdeleted): \App\Entity\Profile
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setExiste', [$existe]);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setIsdeleted', [$isdeleted]);
 
-        return parent::setExiste($existe);
+        return parent::setIsdeleted($isdeleted);
     }
 
     /**

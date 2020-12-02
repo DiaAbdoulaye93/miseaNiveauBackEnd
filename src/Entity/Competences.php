@@ -41,7 +41,7 @@ class Competences
 
     /**
      * @ORM\Column(type="string", length=100)
-     * 
+     * @Groups({"grpcompetence:read"})
      *  
      */
     private $libelle;

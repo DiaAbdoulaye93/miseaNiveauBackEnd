@@ -26,6 +26,11 @@ return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\
                     'grpcompetence' => $o[4],
                 ],
             ],
+            'groups' => [
+                2 => [
+                    'grpcompetence:read',
+                ],
+            ],
         ],
     ],
     $o[0],

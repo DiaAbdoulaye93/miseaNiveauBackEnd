@@ -33,6 +33,12 @@ use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
  *      },
  *    
  *  },
+ * itemOperations={
+*   "edit_user"={
+*   "method"= "put",
+        *"path"= "/admin/users/{id}"
+    *} 
+ * }
  *)
 */
 class User implements UserInterface

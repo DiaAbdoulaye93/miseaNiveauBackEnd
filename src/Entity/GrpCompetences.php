@@ -59,11 +59,21 @@ class GrpCompetences
      */
     private $competences;
 
+    /**
+     * @ORM\ManyToMany(targetEntity=Referentiel::class, mappedBy="grpcompetence")
+     */
+    private $referentiels;
+
+     
+
+    
+
 
     
     public function __construct()
     {
         $this->competences = new ArrayCollection();
+        $this->referentiels = new ArrayCollection();
     }
 
      
@@ -122,6 +132,47 @@ class GrpCompetences
 
         return $this;
     }
+
+    /**
+     * @return Collection|Referentiel[]
+     */
+    public function getReferentiels(): Collection
+    {
+        return $this->referentiels;
+    }
+
+    public function addReferentiel(Referentiel $referentiel): self
+    {
+        if (!$this->referentiels->contains($referentiel)) {
+            $this->referentiels[] = $referentiel;
+            $referentiel->addGrpcompetence($this);
+        }
+
+        return $this;
+    }
+
+    public function removeReferentiel(Referentiel $referentiel): self
+    {
+        if ($this->referentiels->removeElement($referentiel)) {
+            $referentiel->removeGrpcompetence($this);
+        }
+
+        return $this;
+    }
+
+    public function getReferentiel(): ?Referentiel
+    {
+        return $this->referentiel;
+    }
+
+    public function setReferentiel(?Referentiel $referentiel): self
+    {
+        $this->referentiel = $referentiel;
+
+        return $this;
+    }
+
+    
 
    
 }

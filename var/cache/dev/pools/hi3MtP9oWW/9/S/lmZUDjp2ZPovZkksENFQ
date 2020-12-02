@@ -13,7 +13,7 @@ return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\
             'defaults' => [
                 [
                     '__controller' => 'App\\Controller\\ApiController::addUser',
-                    '__api_resource_class' => 'User',
+                    '__api_resource_class' => 'App\\Entity\\User',
                     '__api_collection_operation_name' => 'add_user',
                 ],
             ],

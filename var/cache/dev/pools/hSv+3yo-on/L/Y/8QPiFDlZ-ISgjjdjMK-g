@@ -1,0 +1,183 @@
+<?php //resource_metadata_cebfdf60abd5d0e715dbeec413b47c23
+
+return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+    $o = [
+        clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['ApiPlatform\\Core\\Metadata\\Resource\\ResourceMetadata'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('ApiPlatform\\Core\\Metadata\\Resource\\ResourceMetadata')),
+    ],
+    null,
+    [
+        'ApiPlatform\\Core\\Metadata\\Resource\\ResourceMetadata' => [
+            'shortName' => [
+                'Groupe',
+            ],
+            'description' => [
+                '',
+            ],
+            'itemOperations' => [
+                [
+                    'get_groupe' => [
+                        'method' => 'GET',
+                        'path' => '/admin/groupes/{id}',
+                        'input' => null,
+                        'output' => null,
+                        'input_formats' => [
+                            'jsonld' => [
+                                'application/ld+json',
+                            ],
+                            'json' => [
+                                'application/json',
+                            ],
+                            'html' => [
+                                'text/html',
+                            ],
+                        ],
+                        'output_formats' => [
+                            'jsonld' => [
+                                'application/ld+json',
+                            ],
+                            'json' => [
+                                'application/json',
+                            ],
+                            'html' => [
+                                'text/html',
+                            ],
+                        ],
+                    ],
+                    'update_groupe' => [
+                        'method' => 'PUT',
+                        'path' => '/admin/groupes/{id}',
+                        'input' => null,
+                        'output' => null,
+                        'input_formats' => [
+                            'jsonld' => [
+                                'application/ld+json',
+                            ],
+                            'json' => [
+                                'application/json',
+                            ],
+                            'html' => [
+                                'text/html',
+                            ],
+                        ],
+                        'output_formats' => [
+                            'jsonld' => [
+                                'application/ld+json',
+                            ],
+                            'json' => [
+                                'application/json',
+                            ],
+                            'html' => [
+                                'text/html',
+                            ],
+                        ],
+                    ],
+                    'delete_groupe' => [
+                        'method' => 'DELETE',
+                        'path' => '/admin/prmos/{id}',
+                        'input' => null,
+                        'output' => null,
+                        'input_formats' => [
+                            'jsonld' => [
+                                'application/ld+json',
+                            ],
+                            'json' => [
+                                'application/json',
+                            ],
+                            'html' => [
+                                'text/html',
+                            ],
+                        ],
+                        'output_formats' => [
+                            'jsonld' => [
+                                'application/ld+json',
+                            ],
+                            'json' => [
+                                'application/json',
+                            ],
+                            'html' => [
+                                'text/html',
+                            ],
+                        ],
+                    ],
+                ],
+            ],
+            'collectionOperations' => [
+                [
+                    'get' => [
+                        'path' => '/admin/groupes',
+                        'input' => null,
+                        'output' => null,
+                        'method' => 'GET',
+                        'input_formats' => [
+                            'jsonld' => [
+                                'application/ld+json',
+                            ],
+                            'json' => [
+                                'application/json',
+                            ],
+                            'html' => [
+                                'text/html',
+                            ],
+                        ],
+                        'output_formats' => [
+                            'jsonld' => [
+                                'application/ld+json',
+                            ],
+                            'json' => [
+                                'application/json',
+                            ],
+                            'html' => [
+                                'text/html',
+                            ],
+                        ],
+                    ],
+                    'add_groupe' => [
+                        'method' => 'POST',
+                        'path' => '/admin/groupes',
+                        'input' => null,
+                        'output' => null,
+                        'input_formats' => [
+                            'jsonld' => [
+                                'application/ld+json',
+                            ],
+                            'json' => [
+                                'application/json',
+                            ],
+                            'html' => [
+                                'text/html',
+                            ],
+                        ],
+                        'output_formats' => [
+                            'jsonld' => [
+                                'application/ld+json',
+                            ],
+                            'json' => [
+                                'application/json',
+                            ],
+                            'html' => [
+                                'text/html',
+                            ],
+                        ],
+                    ],
+                ],
+            ],
+            'graphql' => [
+                [
+                    'item_query' => [],
+                    'collection_query' => [],
+                    'delete' => [],
+                    'update' => [],
+                    'create' => [],
+                ],
+            ],
+            'attributes' => [
+                [
+                    'input' => null,
+                    'output' => null,
+                ],
+            ],
+        ],
+    ],
+    $o[0],
+    []
+); }];

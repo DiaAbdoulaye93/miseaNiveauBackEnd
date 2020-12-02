@@ -1,0 +1,58 @@
+<?php //%255BApp%255CEntity%255CReferentiel%255D%255B1%255D
+
+return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+    $o = [
+        clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['ApiPlatform\\Core\\Annotation\\ApiResource'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('ApiPlatform\\Core\\Annotation\\ApiResource')),
+        clone ($p['ApiPlatform\\Core\\Annotation\\ApiFilter'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('ApiPlatform\\Core\\Annotation\\ApiFilter')),
+        clone ($p['Doctrine\\ORM\\Mapping\\Entity'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\Entity')),
+    ],
+    null,
+    [
+        'stdClass' => [
+            'collectionOperations' => [
+                [
+                    'get' => [
+                        'path' => '/admin/Referentiels',
+                    ],
+                    'add_referentiels' => [
+                        'method' => 'POST',
+                        'path' => '/admin/Referentiels',
+                    ],
+                ],
+            ],
+            'itemOperations' => [
+                [
+                    'get_referentiels' => [
+                        'method' => 'GET',
+                        'path' => '/admin/referentiels/{id}',
+                    ],
+                    'update_referentiel' => [
+                        'method' => 'PUT',
+                        'path' => '/admin/referentiels/{id}',
+                    ],
+                    'delete_referentiel' => [
+                        'method' => 'delete',
+                        'path' => '/admin/referentiels/{id}',
+                    ],
+                ],
+            ],
+            'filterClass' => [
+                1 => 'ApiPlatform\\Core\\Bridge\\Doctrine\\Orm\\Filter\\SearchFilter',
+            ],
+            'properties' => [
+                1 => [
+                    'isdeleted' => 'exact',
+                ],
+            ],
+            'repositoryClass' => [
+                2 => 'App\\Repository\\ReferentielRepository',
+            ],
+        ],
+    ],
+    [
+        $o[0],
+        $o[1],
+        $o[2],
+    ],
+    []
+); }];

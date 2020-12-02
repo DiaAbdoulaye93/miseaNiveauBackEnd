@@ -15,14 +15,14 @@ return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\
                 'App\\Entity\\Profile',
                 'id',
                 'libelle',
-                'existe',
+                'isdeleted',
                 'profil',
             ],
             'attributesMetadata' => [
                 [
                     'id' => $o[1],
                     'libelle' => $o[2],
-                    'existe' => $o[3],
+                    'isdeleted' => $o[3],
                     'profil' => $o[4],
                 ],
             ],

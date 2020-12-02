@@ -22,7 +22,7 @@ class ApprenantFixtures extends Fixture implements DependentFixtureInterface
     {
        
         $faker = Factory::create('fr_FR');
-        $password="apprenant";
+        $password="Apprenant";
 
         $apprenant=new Apprenant();
       //  $apprenant->setTelephone($faker->unique()->randomElement(['77347343', '769834924','788439440', '70823920']));

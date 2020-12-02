@@ -1,0 +1,3 @@
+<?php //route_name_371ccfd3452e2ad1877689c1eb222440
+
+return [PHP_INT_MAX, 'api_groupe_tags_get_Grptag_item'];

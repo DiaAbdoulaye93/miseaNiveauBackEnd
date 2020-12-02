@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use App\Repository\ProfileRepository;
+use ApiPlatform\Core\Annotation\ApiFilter;
 use Doctrine\Common\Collections\Collection;
 use ApiPlatform\Core\Annotation\ApiResource;
 use ApiPlatform\Core\Annotation\ApiSubresource;
@@ -12,8 +13,8 @@ use Symfony\Component\Validator\Constraints\Regex;
 use Symfony\Component\Serializer\Annotation\Groups;
 use Symfony\Component\Validator\Constraints\NotBlank;
 use Symfony\Component\Validator\Constraints as Assert;
+use ApiPlatform\Core\Bridge\Doctrine\Orm\Filter\SearchFilter;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
-
 /**
  * @ApiResource(
  * normalizationContext={"groups"={"profil"}},
@@ -22,17 +23,27 @@ use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
  *    "POST"={"path"="/admin/profils"},
  * },
  * itemOperations={
- *     "put"={"path"="/admin/profil/{id}"},
- *     "delete"={"path"="/admin/profil/{id}"},
+ *    
+ *     
  *       "get_profil"=
  *      {
  *         "method"="GET",
- *         "path"="/admin/profil/{id}"
+ *         "path"="/admin/profils/{id}"
+ *      },
+ *  "update_profile"=
+ *      {
+ *         "method"="put",
+ *         "path"="/admin/profils/{id}"
+ *      },
+ *  "delete_profil"=
+ *      {
+ *         "method"="delete",
+ *         "path"="/admin/profils/{id}"
  *      }
  *     }
- *   
+ *
  * )
- *  
+ *  @ApiFilter(SearchFilter::class, properties={"isdeleted": "exact"})
  * @ORM\Entity(repositoryClass=ProfileRepository::class)
  *@UniqueEntity(
  * fields={"libelle"},
@@ -56,9 +67,6 @@ class Profile
      * 
      */
     private $libelle;
-
-    
-
     /**
      * @ORM\Column(type="boolean", nullable=true)
      * @Groups({"profil"})

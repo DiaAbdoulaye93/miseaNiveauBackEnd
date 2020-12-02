@@ -55,6 +55,14 @@ return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\
                     ],
                 ],
             ],
+            'itemOperations' => [
+                5 => [
+                    'edit_user' => [
+                        'method' => 'put',
+                        'path' => '/admin/users/{id}',
+                    ],
+                ],
+            ],
         ],
     ],
     [
